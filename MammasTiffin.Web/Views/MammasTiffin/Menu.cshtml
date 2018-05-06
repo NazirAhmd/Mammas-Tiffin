@@ -1,0 +1,50 @@
+﻿@using MammasTiffin.Web.CustomHelpers
+@model MammasTiffin.Web.ViewModels.MammasTiffin.MenuViewModel
+@{
+    ViewBag.Title = "Menu";
+}
+<div class="menuWrapper">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row text-center">
+                <div class="bigTitle">Menus</div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-offset-4 col-md-4 col-xs-12">
+                    Filter : @Html.RadioButtonFor(x => x.MenuType, "None", new { id = "rdoNone" }) None
+                    @Html.RadioButtonFor(x => x.MenuType, "Veg", new { id = "rdoVeg" }) Veg
+                    @Html.RadioButtonFor(x => x.MenuType, "NonVeg", new { id = "rdoNonVeg" }) Non-Veg
+                </div>
+            </div>
+            @foreach (var item in Model.MenuDetailsList)
+            {
+                @Html.Partial("_Menu", item)
+            }
+        </div>
+        <div class="col-md-4">
+            <div class="orderSection">
+                <div class="row text-center">
+                    <div class="bigTitle">Your Order</div>
+                </div>
+                <div class="row orderContainer">
+                    <div class="divEmptyCart">
+                        <div>No Order Yet! Order Now.</div>
+                    </div>
+                </div>
+                <div class="row divtotalAmountContainer smallTitle hideElement">
+                    <div class="col-xs-6">
+                        <span>Total:</span>
+                    </div>
+                    <div class="col-xs-6 divtotalAmountColumn text-right">
+
+                    </div>
+                </div>
+                <div class="row text-center divOrderNowBtnContainer hideElement">
+                    @Html.CusButton("btnOrderNow", "Order Now!", false, new { @class = "btnOrderNow bigTitle" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/mammasTiffin/menu.js"></script>

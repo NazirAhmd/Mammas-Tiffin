@@ -1,0 +1,114 @@
+﻿html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
+    padding-bottom: 10px;
+    margin: 0 0 80px;
+}
+
+
+.navbar-default {
+    background-color: #fff0e6 !important;
+}
+
+.nav {
+    font-size: 20px;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.highlight {
+    color: #ffa366;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    padding-left: 0px;
+}
+
+a:hover {
+    color: #ffa366 !important;
+    background-color: yellow;
+}
+
+.bodyWrapper footer {
+    height: 80px;
+    background-color: #fff0e6;
+    padding-top: 10px;
+    font-weight: 200;
+    font-size: 20px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.underline {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: 0;
+    height: 3px;
+    width: 40px;
+    background-color: #ffa366;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=button], input[type=submit] {
+    background: #ffa366;
+    color: white;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    height: 30px;
+}
+
+/*----------------Margin------------*/
+.margin-10px {
+    margin: 10px;
+}
+
+.marginTop-10px {
+    margin-top: 10px;
+}
+
+.marginBottom-10px {
+    margin-bottom: 10px;
+}
+
+.marginLeft-10px {
+    margin-left: 10px;
+}
+
+.marginRight-10px {
+    margin-right: 10px;
+}
+/*------------------------Form Container-------------------------*/
+.formContainer {
+    padding: 20px 0;
+}
+/*------------------------------------Hide----------------------------------------*/
+.hideElement {
+    display: none;
+}
+/*------------------------------------Redefining bootstrap class-------------------------*/
+.row {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 20px;
+}
+/*---------------------------------Custom------------------------*/
+.bigTitle {
+    font-size: 40px!important;
+}
+
+.smallTitle {
+    font-size: 30px !important;
+}

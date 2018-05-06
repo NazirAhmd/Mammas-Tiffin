@@ -1,0 +1,76 @@
+﻿@using MammasTiffin.Web.ViewModels.Admin
+@using MammasTiffin.Web.CustomHelpers
+@model AddItemViewModel
+@{
+    ViewBag.Title = "AddItem";
+}
+@using (Html.BeginForm("AddItem", "Admin", FormMethod.Post, new { id = "formAddItem", enctype = "multipart/form-data" }))
+{
+    <div class="addItemWrapper">
+        <div class="container">
+            <div class="bigTitle text-center">Add Item</div>
+            <div class="formContainer">
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-3">
+                        @Html.LabelFor(x => x.ItemDetail.ItemName, new { @class = "" })
+                    </div>
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(x => x.ItemDetail.ItemName, new { @class = "form-control" })
+                    </div>
+                    <div class="col-md-3 ">
+                        @Html.ValidationMessageFor(x => x.ItemDetail.ItemName)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-3">
+                        @Html.LabelFor(x => x.ItemDetail.Price, new { @class = "" })
+                    </div>
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(x => x.ItemDetail.Price, new { @class = "form-control" })
+                    </div>
+                    <div class="col-md-3 ">
+                        @Html.ValidationMessageFor(x => x.ItemDetail.Price)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-3">
+                        @Html.LabelFor(x => x.ItemDetail.IsVeg, new { @class = "" })
+                    </div>
+                    <div class="col-md-3">
+                        @Html.DropDownListFor(x => x.ItemDetail.IsVeg, Model.ItemDetail.VegNonVegSelectList, "", new { @class = "form-control" })
+                    </div>
+                    <div class="col-md-3 ">
+                        @Html.ValidationMessageFor(x => x.ItemDetail.IsVeg)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-3">
+                        @Html.LabelFor(x => x.ItemDetail.Ingredients, new { @class = "" })
+                    </div>
+                    <div class="col-md-3">
+                        @Html.TextAreaFor(x => x.ItemDetail.Ingredients, new { @class = "form-control" })
+                    </div>
+                    <div class="col-md-3 ">
+                        @Html.ValidationMessageFor(x => x.ItemDetail.Ingredients)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-3">
+                        @Html.LabelFor(x => x.ItemDetail.File, new { @class = "" })
+                    </div>
+                    <div class="col-md-3 ">
+                        @Html.CusFileUploadFor(x => x.ItemDetail.File, new { @class = "" })
+                    </div>
+                    <div class="col-md-3 ">
+                        @Html.ValidationMessageFor(x => x.ItemDetail.File)
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-4 col-md-4 text-center">
+                    @Html.CusButton("addItem", "Add Item", true, new { @class = "" })
+                </div>
+            </div>
+        </div>
+    </div>
+}

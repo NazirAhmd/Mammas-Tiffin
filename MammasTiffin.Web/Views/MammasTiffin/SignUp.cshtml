@@ -1,0 +1,77 @@
+﻿@using MammasTiffin.Web.CustomHelpers
+@model MammasTiffin.Web.ViewModels.MammasTiffin.SignUpViewModel
+
+@{
+    ViewBag.Title = "Sign up";
+}
+@using (Html.BeginForm("SignUp", "MammasTiffin", FormMethod.Post, new { id = "formSignUp", enctype = "multipart/form-data" }))
+{
+    <div class="signUpWrapper">
+        <div class="container">
+            <div class="bigTitle text-center">Sign up</div>
+            <div class="formContainer">
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-3">
+                        @Html.LabelFor(x => x.FullName)
+                    </div>
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(x => x.FullName, new { @class = "form-control" })
+                    </div>
+                    <div class="col-md-3">
+                        @Html.ValidationMessageFor(x => x.FullName)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-3">
+                        @Html.LabelFor(x => x.Email)
+                    </div>
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                    </div>
+                    <div class="col-md-3">
+                        @Html.ValidationMessageFor(x => x.Email)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-3">
+                        @Html.LabelFor(x => x.Mobile)
+                    </div>
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(x => x.Mobile, new { @class = "form-control" })
+                    </div>
+                    <div class="col-md-3">
+                        @Html.ValidationMessageFor(x => x.Mobile)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-3">
+                        @Html.LabelFor(x => x.Password)
+                    </div>
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+                    </div>
+                    <div class="col-md-3">
+                        @Html.ValidationMessageFor(x => x.Password)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-3">
+                        @Html.LabelFor(x => x.ConfirmPassword)
+                    </div>
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(x => x.ConfirmPassword, new { @class = "form-control" })
+                    </div>
+                    <div class="col-md-3">
+                        @Html.ValidationMessageFor(x => x.ConfirmPassword)
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-4 col-md-4 text-center">
+                    @Html.CusButton("btnSignUp", "Sign up", false, new { @class = "" })
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

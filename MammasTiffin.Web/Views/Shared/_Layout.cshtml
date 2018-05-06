@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="~/Images/favicon.ico" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Mamma's Tiffin", "Home", "MammasTiffin", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Menu", "Menu", "MammasTiffin", new { area = "" }, new { @class = "nav-tabs" })</li>
+                    <li>@Html.ActionLink("Login", "Login", "MammasTiffin", new { area = "" }, new { @class = "nav-tabs" })</li>
+                    <li>@Html.ActionLink("Sign up", "SignUp", "MammasTiffin", new { area = "" }, new { @class = "nav-tabs" })</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bodyWrapper">
+        @RenderBody()
+        <footer class="text-center">
+            <div class="container">
+                @*<ul class="nav">
+                    <li>@Html.ActionLink("About Us", "AboutUs", "MammasTiffin", new { area = "" }, new { @class = "nav-tabs" })</li>
+                    <li>@Html.ActionLink("Contact Us", "ContactUs", "MammasTiffin", new { area = "" }, new { @class = "nav-tabs" })</li>
+                </ul>*@
+                <p>&copy; @DateTime.Now.Year - Mamma's <span class="highlight">Tiffin</span></p>
+            </div>
+        </footer>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    @*@RenderSection("scripts", required: false)*@
+</body>
+</html>

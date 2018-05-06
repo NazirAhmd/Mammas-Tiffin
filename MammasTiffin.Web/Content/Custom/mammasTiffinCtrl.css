@@ -1,0 +1,176 @@
+﻿/*--------------------------------------------Home----------------------------*/
+#mainBackgroungImage {
+    background: url('../../Images/Home/mainBackground2.jpg');
+    background-size: cover;
+    min-height: 500px;
+    position: relative;
+    width: 100%;
+    background-position: center;
+}
+
+.banner-info {
+    margin-top: 160px;
+    color: white;
+}
+
+.bnr-title {
+    font-size: 70px;
+    font-weight: 500;
+}
+
+.bnr-subtitle {
+    font-size: 40px;
+    font-weight: 300;
+    margin-top: 0px;
+    font-style: italic;
+}
+
+.bnr-para {
+    font-size: 30px;
+}
+
+#service {
+    background-color: #fff0e6;
+    text-align: center;
+}
+
+.service-title {
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.service-subtitle {
+    font-size: 20px;
+}
+
+.orderSection {
+    margin-top: 32px;
+}
+
+.underline {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: 0;
+    height: 3px;
+    width: 40px;
+    background-color: #ffa366;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-item img {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.menu-item {
+    border: 1px solid #d8d9da;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+    .menu-item:nth-child(even) {
+        background-color: #fff0e6;
+    }
+
+    .menu-item:nth-child(odd) {
+    }
+
+img {
+    /*width: 80%;*/
+}
+
+/*-----------------------------------Contact Us----------------------------------*/
+
+#contact {
+    min-height: 600px;
+}
+
+    #contact .contact-icon {
+        width: 10%;
+    }
+
+/*-----------------------------------Menu------------------------------------*/
+.menuWrapper {
+    margin: 0 5%;
+}
+
+.menuContainer {
+}
+
+.orderContainer {
+    border: 1px solid #d8d9da;
+    min-height: 350px;
+}
+
+.orderDetails {
+}
+
+.order-item {
+    margin-left: 10px;
+}
+
+.inpTextQty {
+    width: 30px;
+    outline: none;
+    background-color: #ffa366;
+    border: none;
+    height: 30px;
+    color: white;
+    /*border-radius: 4px;*/
+    text-align: center;
+}
+
+.spanQty {
+    /*margin-left: 108px;*/
+}
+
+.qtyWrapper {
+    /*text-align:center;*/
+}
+
+.orderSection {
+    margin-left: 10px;
+}
+
+.divEmptyCart {
+    text-align: center;
+    padding-top: 28%;
+    color: #d8dada;
+    font-size: 38px;
+}
+
+.imgEmptyCart {
+    width: 50%;
+}
+
+input[type=button].btndec, input[type=button].btninc {
+    background: #dddddd;
+    color: black;
+    width: 30px;
+    height: 30px;
+}
+
+input[type=button].btnAddQty {
+    width: 100px;
+}
+
+.btnOrderNow {
+    width: 100%;
+    height: 60px!important;
+}
+
+.divtotalAmountContainer {
+    border: 1px solid #d8d9da;
+    margin-bottom: 20px;
+    padding: 5px 0;
+}
+
+    .divtotalAmountContainer .divtotalAmountColumn {
+        padding-right: 7%;
+    }
+/*--------------------------------------------------Login------------------------------------------*/
+.loginWrapper {
+}

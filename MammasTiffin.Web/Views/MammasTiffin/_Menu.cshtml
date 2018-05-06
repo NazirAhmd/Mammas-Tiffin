@@ -1,0 +1,48 @@
+﻿@using MammasTiffin.Web.CustomHelpers
+@model MammasTiffin.Web.ViewModels.MammasTiffin.MenuDetail
+
+@{
+    string menuImgBase64Data = Convert.ToBase64String(Model.ImageData);
+    string menuImgDataURL = string.Format("data:image/png/jpeg/jpg;base64,{0}", menuImgBase64Data);
+    string vegNonvegIconUrl = Model.IsVeg == "Y" ? "~/Images/Menu/veg.jpg" : "~/Images/Menu/non-veg.jpg";
+    string menuItemclass = "menuItem_" + Model.Id;//To ensure we have one class for item in the Menu as well as order section,hence used class
+
+}
+<div class="row menu-item @menuItemclass">
+    @Html.HiddenFor(x => x.IsVeg, new { @class = "hdnIsVeg" })
+    <div class="col-md-6 col-sm-12">
+        <img src=@menuImgDataURL class="img-responsive img-thumbnail" />
+    </div>
+    <div class="col-md-6 col-sm-12 menuDescription">
+        <div class="row menu-title itemNameWithIcon">
+            <div class="col-xs-12">
+                <img src=@Url.Content(vegNonvegIconUrl) class="imgVegNonVeg" />
+                <span class="highlight">@Model.ItemName</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <span class="highlight">Price:</span>
+                <span class="price">Rs.@Model.Price</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <span class="highlight">Ingredients:</span>
+                @Model.Ingredients
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <div class="qtyWrapper">
+                    <span class="spanQty hideElement">
+                        <input type="button" class="btndec" value="-">
+                        <input type="text" readonly class="inpTextQty">
+                        <input type="button" class="btninc" value="+">
+                    </span>
+                    @Html.CusButton("BtnAdd", "Add", false, new { @class = "btnAddQty" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
