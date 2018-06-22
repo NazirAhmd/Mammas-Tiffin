@@ -12,8 +12,8 @@ namespace MammasTiffin.DataAccess.Repository
 
         public Repository(MammasTiffinDbContext mammasTiffinDbContext)
         {
-            this._mammasTiffinDbContext = mammasTiffinDbContext;
-            this._dbSet = this._mammasTiffinDbContext.Set<TEntity>();
+            _mammasTiffinDbContext = mammasTiffinDbContext;
+            _dbSet = _mammasTiffinDbContext.Set<TEntity>();
         }
 
         public IQueryable<TEntity> Data
