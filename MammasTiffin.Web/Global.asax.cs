@@ -15,5 +15,17 @@ namespace MammasTiffin.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             MapperConfig.RegisterAutoMapperConfigurations();
         }
+        protected void Application_BeginRequest()
+        {
+
+        }
+        protected void Application_AuthenticateRequest()
+        {
+
+        }
+        protected void Application_PostResolveRequestCache()
+        {
+
+        }
     }
 }

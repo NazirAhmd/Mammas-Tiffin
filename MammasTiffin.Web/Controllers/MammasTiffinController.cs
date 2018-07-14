@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MammasTiffin.Web.Controllers
 {
+    [Authorize]
     public class MammasTiffinController : BaseController
     {
         private readonly MammasTiffinBusinessClass _mammasTiffinBusinessClass;
@@ -18,6 +19,7 @@ namespace MammasTiffin.Web.Controllers
 
         #region Home
         #region Action Methods
+        [AllowAnonymous]
         [HttpGet]
         public ActionResult Home()
         {
@@ -49,31 +51,6 @@ namespace MammasTiffin.Web.Controllers
         #endregion
         #endregion
 
-        #region Login
-        #region Action methods
-        [HttpGet]
-        public ActionResult Login()
-        {
-            LoginViewModel viewModel = new LoginViewModel();
-            return View(viewModel);
-        }
-        #endregion
-        #region Private methods
-        #endregion
-        #endregion
-
-        #region Sign up
-        #region Action methods
-        [HttpGet]
-        public ActionResult SignUp()
-        {
-            SignUpViewModel viewModel = new SignUpViewModel();
-            return View(viewModel);
-        }
-        #endregion
-        #region Private methods
-        #endregion
-        #endregion
 
         #region About Us
         [HttpGet]
