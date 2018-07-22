@@ -11,8 +11,6 @@ namespace MammasTiffin.Common.AutoMapperConfiguration
             Mapper.Initialize(config =>
             {
                 config.CreateMap<ItemBM, Item>();
-                config.CreateMap<ItemImageBM, ItemImage>();
-                config.CreateMap<Item, MenuDetailBM>().ForMember(dest => dest.ImageData, opt => opt.MapFrom(src => src.ItemImage.ImageData));
             });
         }
     }

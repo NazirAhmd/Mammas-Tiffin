@@ -38,10 +38,6 @@ namespace MammasTiffin.Entities.EntityFramework
         [Timestamp]
         public byte[] RowVersionStamp { get; set; }
 
-        public int ImageId { get; set; }
-
-        public virtual ItemImage ItemImage { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderedItem> OrderedItems { get; set; }
     }

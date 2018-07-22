@@ -171,9 +171,17 @@
     <Content Include="Images\Home\Menus\roll.jpeg" />
     <Content Include="Images\Home\Menus\soup.jpeg" />
     <Content Include="Images\Home\Menus\vegSalad.jpg" />
+    <Content Include="Images\Menu\ChickenCurry.jpeg" />
+    <Content Include="Images\Menu\ChickenRoll.jpeg" />
+    <Content Include="Images\Menu\Chicken.jpeg" />
+    <Content Include="Images\Menu\Dosa.jpeg" />
     <Content Include="Images\Menu\empty-cart.svg" />
+    <Content Include="Images\Menu\FriedRiceWithEgg.jpeg" />
+    <Content Include="Images\Menu\FriedRice.jpeg" />
     <Content Include="Images\Menu\non-veg.jpg" />
     <Content Include="Images\Home\office-block.png" />
+    <Content Include="Images\Menu\PanFriedveg.jpeg" />
+    <Content Include="Images\Menu\Salmon.jpeg" />
     <Content Include="Images\Menu\veg.jpg" />
     <Content Include="Scripts\mammasTiffin\menu.js" />
     <Content Include="Views\Shared\Error.cshtml" />

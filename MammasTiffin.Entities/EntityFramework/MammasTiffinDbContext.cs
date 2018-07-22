@@ -12,7 +12,6 @@ namespace MammasTiffin.Entities.EntityFramework
         {
         }
 
-        public virtual DbSet<ItemImage> ItemImages { get; set; }
         public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<OrderedItem> OrderedItems { get; set; }
@@ -20,16 +19,6 @@ namespace MammasTiffin.Entities.EntityFramework
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ItemImage>()
-                .Property(e => e.ImageName)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ItemImage>()
-                .HasMany(e => e.Items)
-                .WithRequired(e => e.ItemImage)
-                .HasForeignKey(e => e.ImageId)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<Item>()
                 .Property(e => e.ItemName)
                 .IsUnicode(false);

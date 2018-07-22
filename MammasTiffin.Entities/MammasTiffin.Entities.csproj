@@ -51,7 +51,6 @@
   <ItemGroup>
     <Compile Include="EntityFramework\Customer.cs" />
     <Compile Include="EntityFramework\Item.cs" />
-    <Compile Include="EntityFramework\ItemImage.cs" />
     <Compile Include="EntityFramework\MammasTiffinDbContext.cs" />
     <Compile Include="EntityFramework\OrderDetail.cs" />
     <Compile Include="EntityFramework\OrderedItem.cs" />
@@ -63,6 +62,10 @@
     <Compile Include="Migrations\201712081436334_AlterItemImageTableAddedColumn.Designer.cs">
       <DependentUpon>201712081436334_AlterItemImageTableAddedColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807190242167_Deleted ItemImage table.cs" />
+    <Compile Include="Migrations\201807190242167_Deleted ItemImage table.Designer.cs">
+      <DependentUpon>201807190242167_Deleted ItemImage table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -72,6 +75,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712081436334_AlterItemImageTableAddedColumn.resx">
       <DependentUpon>201712081436334_AlterItemImageTableAddedColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807190242167_Deleted ItemImage table.resx">
+      <DependentUpon>201807190242167_Deleted ItemImage table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -24,7 +24,7 @@ namespace MammasTiffin.BusinessComponent.BusinessClasses.MammasTiffin
             using (UnitOfWork unitOfWork = new UnitOfWork())
             {
                 IRepository<Item> itemsRepo = unitOfWork.GetRepository<Item>();
-                menuDetailList = itemsRepo.Data.Include(x => x.ItemImage).ProjectTo<MenuDetailBM>().ToList();
+                menuDetailList = itemsRepo.Data.ProjectTo<MenuDetailBM>().ToList();
             }
             menuDetailList.ForEach(x => x.Price = Math.Round(x.Price, 0));
             return menuDetailList;

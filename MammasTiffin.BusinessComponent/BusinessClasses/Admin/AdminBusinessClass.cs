@@ -14,8 +14,6 @@ namespace MammasTiffin.BusinessComponent.BusinessClasses.Admin
             bool success = false;
             Item item = Mapper.Map<Item>(itemBM);
             item.DateAndTime = DateTime.Now;
-            item.ItemImage = Mapper.Map<ItemImage>(itemImageBM);
-            item.ItemImage.DateAndTime = DateTime.Now;
             
             using (UnitOfWork unitOfWork=new UnitOfWork())
             {

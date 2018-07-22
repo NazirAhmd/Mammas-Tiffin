@@ -14,8 +14,6 @@ namespace MammasTiffin.Web.App_Start
             {
                 config.CreateMap<ItemDetailVM, ItemBM>();
                 config.CreateMap<ItemBM, Item>();
-                config.CreateMap<ItemImageBM, ItemImage>();
-                config.CreateMap<Item, MenuDetailBM>().ForMember(dest => dest.ImageData, opt => opt.MapFrom(src => src.ItemImage.ImageData));
                 config.CreateMap<MenuDetailBM, MenuDetail>();
             });
         }
